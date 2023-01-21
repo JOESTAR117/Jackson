@@ -38,7 +38,7 @@ const Header = ({ header, social }) => {
             <AiFillGithub className={styles.icon} />
           </a>
         </div>
-        <a href="#" className={styles.arrow}>
+        <a href="#footer" className={styles.arrow}>
           <AiOutlineArrowDown className={styles.icon} />
         </a>
       </div>
