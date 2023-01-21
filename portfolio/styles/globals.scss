@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 * {
     margin: 0;
@@ -8,6 +9,14 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include device(notebook){
+        font-size: 60%;
+    }
+    @include device(mobile){
+        font-size: 58%;
+    }
 }
 
 body {
@@ -21,6 +30,10 @@ h1,
     font-size: 7.5rem;
     line-height: 7.5rem;
     color: $primary;
+
+    @include device(notebook){
+        font-size: 6.5rem;
+    }
 }
 
 h2,
@@ -88,4 +101,47 @@ p,
             background-color: lighten($primary, 5)
         }
     }
+}
+
+.field {
+    &:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+    &>* {
+        display: block;
+        text-align: left;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+        outline: none;
+        resize: none;
+        padding: 1rem;
+        width: 100%;
+        color: $black;
+        font-family: $fontFamily;
+    }
+}
+
+.error,
+.success {
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.error {
+    color: $error;
+    font-size: 1.4rem;
+}
+
+.success {
+    font-size: 2.6rem;
+    color: $white;
 }

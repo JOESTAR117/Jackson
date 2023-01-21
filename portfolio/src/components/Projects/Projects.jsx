@@ -9,7 +9,7 @@ const Projects = ({ projects }) => {
   ));
 
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id='projects'>
       <h2>{title}</h2>
       <ul className={styles.list}>{renderProjects}</ul>
       <a href={url} target='_blank' className="btn btn-primary">

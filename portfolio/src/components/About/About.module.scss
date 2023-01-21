@@ -6,27 +6,42 @@
     margin-bottom: $marginBottom;
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
+    scroll-margin-top: 16rem;
 
-    .image{
-        img{
-            width: 47rem;
-            height: 43rem;
-            position: relative;
+    @include device(mobile) {
+        margin-bottom: $marginBottomMobile;
+    }
+
+    @include device(tablet) {
+        flex-direction: column;
+
+    }
+
+    .image,
+    img {
+        width: 100%;
+        max-width: 47rem;
+        height: 43rem;
+        position: relative;
+
+        @include device(notebook){
+            margin-bottom: 4rem;
         }
-        .box{
+
+        .box {
             position: relative;
             top: -54rem;
-            left: -4rem;
+            left: -1rem;
         }
 
     }
 
-    .content{
+    .content {
         width: 100%;
         max-width: 60rem;
 
-        a{
+        a {
             margin-top: 1.5rem;
         }
     }

@@ -7,6 +7,15 @@
     display: flex;
     justify-content: space-between;
     gap: 6rem;
+    scroll-margin-top: 8rem;
+
+    @include device(mobile){
+       margin-bottom: $marginBottomMobile;
+    }
+    @include device(tablet){
+        flex-direction: column;
+        align-items: center;
+    }
 
     ul{
         list-style: none;
@@ -15,6 +24,10 @@
     .skills{
         width: 100%;
         max-width: 47rem;
+
+        @include device(tablet){
+            max-width: 60rem ;
+        }
 
         .heading{
             margin-bottom: 3rem;
